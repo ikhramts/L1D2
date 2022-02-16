@@ -5,6 +5,8 @@ This is a GitHubized clone of the
 [original program](https://www.physionet.org/content/lyapunov/1.0.0/) 
 posted on physionet.org. 
 
+A recompiled Windows x64 executable is available in the Relases
+section in the sidebar.
 
 ## Introduction
 
