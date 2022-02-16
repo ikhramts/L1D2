@@ -1,0 +1,3 @@
+*   file_name series# startIndex stopIndex m J W divergeT
+lorenz.dat 1 1 0 5 11 300 500
+lorenz.dat 2 1 0 7 7 300 500
