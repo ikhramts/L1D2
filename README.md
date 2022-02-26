@@ -113,7 +113,7 @@ complete point, the 20% complete point, and so on.
 5. The output files are ASCII text that can be read into a spread
 sheet program (or a custom program) for further analysis.  The first
 column shows the independent variable for the scaling plots.  For D2,
-the independent variable is ln(R), where R refers to the length scale
+the independent variable is `ln(R)`, where `R` refers to the length scale
 or radius for the nearest neighbor test.  For L1, the independent
 variable is divergence time; the units are "samples" so you need to
 multiply by your data sampling period to get "real" time.
