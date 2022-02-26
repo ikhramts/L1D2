@@ -66,7 +66,7 @@ double  *gData, *gNDivergence;
 double  **gDivergence, **gCSum;
 test    *gTest;
 
-int    main(void)
+int main(void)
 {
     int   i;
     char  str[256];
@@ -134,7 +134,7 @@ double** AllocateDMatrix(long nRows, long nCols)
     return(mat);
 }
 
-void   ComputeSlopes(void)
+void ComputeSlopes(void)
 {
     int    i, i2, j;
     double k, m, b, rr;
@@ -198,7 +198,7 @@ void   ComputeSlopes(void)
     };
 }
 
-void   FreeDMatrix(double** mat, long nRows)
+void FreeDMatrix(double** mat, long nRows)
 {
     long   i;
 
@@ -210,7 +210,7 @@ void   FreeDMatrix(double** mat, long nRows)
     free(mat);
 }
 
-void   GenerateTemplateFile(void)
+void GenerateTemplateFile(void)
 {
     FILE* outFile;
 
@@ -234,7 +234,7 @@ void   GenerateTemplateFile(void)
     fclose(outFile);
 }
 
-long   GetData(char* fileName, int tsN, long start, long stop)
+long GetData(char* fileName, int tsN, long start, long stop)
 {
     long   i, j, len;
     long   nHead, nCols, nRows, nPts;
@@ -312,7 +312,7 @@ long   GetData(char* fileName, int tsN, long start, long stop)
     return(nPts);
 }
 
-void   LineFit(double* data, double n, double* m, double* b, double* rr)
+void LineFit(double* data, double n, double* m, double* b, double* rr)
 {
     int    i;
     double sx, sy, sxy, sx2, sy2;
@@ -343,7 +343,7 @@ void   LineFit(double* data, double n, double* m, double* b, double* rr)
     *rr = rrTemp;
 }
 
-void   PercentDone(int percentDone)
+void PercentDone(int percentDone)
 {
     static last = 100;
 
@@ -364,7 +364,7 @@ void   PercentDone(int percentDone)
     };
 }
 
-void   ProcessTest(int testN)
+void ProcessTest(int testN)
 {
     long   m, J, W, divergeT, neighborIndex, maxIndex;
     long   i, j, k, T, CSumIndex, percentDone;
@@ -446,6 +446,7 @@ void   ProcessTest(int testN)
                         neighborIndex = j;
                     };
                 };
+
             if (i < nVectors - W)
                 for (j = i + W; j < nVectors; j++)
                 {
@@ -473,6 +474,7 @@ void   ProcessTest(int testN)
                         neighborIndex = j;
                     };
                 };
+
             isNeighbor[neighborIndex] = 1;
 
             /* track divergence */
@@ -528,7 +530,7 @@ void   ProcessTest(int testN)
     free(gData);
 }
 
-void   ReadTestFile(char* fileName)
+void ReadTestFile(char* fileName)
 {
     int    i;
     int    nHead, nRows;
@@ -584,7 +586,7 @@ void   ReadTestFile(char* fileName)
     fclose(inFile);
 }
 
-void   SaveD2Results(char* fileRoot)
+void SaveD2Results(char* fileRoot)
 {
     int    i, i1, i2, testN, keepGoing;
     char   str[256];
@@ -648,7 +650,7 @@ void   SaveD2Results(char* fileRoot)
     fclose(outFile);
 }
 
-void    SaveL1Results(char* fileRoot)
+void SaveL1Results(char* fileRoot)
 {
     int   i, testN;
     char  str[256];
